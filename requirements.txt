@@ -1,0 +1,3 @@
+pyspark==3.2.0
+findspark==1.4.2  # Only if you are using findspark to initialize Spark
+requests==2.26.0

@@ -1,0 +1,18 @@
+# Python-specific
+__pycache__/
+*.pyc
+
+# PySpark logs and temporary files
+logs/
+*.log
+*.tmp
+
+# Spark checkpoints
+checkpoint/
+
+# Data and results directories (customize based on your project structure)
+data/raw_data/
+data/results/
+
+# Virtual environment
+venv/

@@ -2,6 +2,7 @@ import logging
 from src.extract import extract_github_data
 from src.transform import transform_data
 
+
 def setup_logging():
     logging.basicConfig(
         level=logging.INFO,
@@ -13,19 +14,18 @@ def main():
     try:
         setup_logging()
 
-        github_token = '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'
+        logging.info('Starting GitHubData Extraction...')
+        #Initialize the extract function
+        extract_github_data()
+        logging.info('GitHubData Extraction Completed.')
 
-        logging.info('Starting GitHub data extraction...')
-        extract_github_data(github_token)
-        logging.info('GitHub data extraction completed.')
-
-        logging.info('Starting data transformation...')
-        transform_data(github_token)
-        logging.info('Data transformation completed.')
+        logging.info('Starting GitHubData Transformation...')
+        #Initialize the transform function
+        transform_data()
+        logging.info('GitHubData Transformation Completed.')
 
     except Exception as e:
         logging.error(f'An error occurred: {str(e)}')
 
 if __name__ == "__main__":
     main()
-
